@@ -18,7 +18,7 @@ TODO
 Things I want to add:
 - Optional event system; for use with ekg etc.
 - Persistence.
-- Chaos function which goes in and randomly ruings Thread's within a session; to test persistence/recovery.
+- Chaos function which goes in and randomly ruins Thread's within a session; to test persistence/recovery.
 - Tests.
 
 
