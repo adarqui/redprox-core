@@ -1,6 +1,6 @@
 name:                redprox-core
 version:             0.0.1
-synopsis:            Library & tool to proxy queues/pubsub messages between several redis servers.
+synopsis:            Library to proxy queues & pubsub messages between several redis servers.
 description:
     This is real life.
 homepage:            https://github.com/adarqui/redprox-core
