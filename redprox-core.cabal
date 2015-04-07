@@ -1,0 +1,59 @@
+name:                redprox-core
+version:             0.0.1
+synopsis:            Library & tool to proxy queues/pubsub messages between several redis servers.
+description:
+    This is real life.
+homepage:            https://github.com/adarqui/redprox-core
+bug-reports:         https://github.com/adarqui/redprox-core/issues
+license:             MIT
+license-file:        LICENSE
+author:              Andrew Darqui
+maintainer:          andrew.darqui@gmail.com
+category:            System
+build-type:          Simple
+cabal-version:       >=1.18
+homepage:            https://github.com/adarqui/redprox-core
+bug-reports:         https://github.com/adarqui/redprox-core/issues
+
+library
+    exposed-modules:     
+                     System.RedProx
+                     System.RedProx.Types
+                     System.RedProx.Core
+                     System.RedProx.Poison
+                     System.RedProx.Chaos
+                     System.RedProx.Misc
+    build-depends:
+                     base >= 4,
+                     bytestring == 0.10.6.0,
+                     hedis == 0.6.5,
+                     monad-loops == 0.4.2.1,
+                     transformers == 0.4.3.0
+    hs-source-dirs:  src
+    ghc-options:     -Wall
+    default-language: Haskell2010
+
+executable           simple
+    main-is:         simple.hs
+    build-depends:
+                     base >= 4,
+                     bytestring == 0.10.6.0,
+                     redprox-core == 0.0.1
+    hs-source-dirs:  examples
+    ghc-options:     -Wall
+    default-language: Haskell2010
+
+test-suite tests
+    type:            detailed-0.9
+    test-module:     TestRedProx
+    build-depends:
+                     base >= 4,
+                     Cabal >= 1.20.0,
+                     redprox-core == 0.0.1
+    hs-source-dirs:  tests
+    ghc-options:     -Wall
+    default-language: Haskell2010
+
+source-repository head
+  type:              git
+  location:          https://github.com/adarqui/redprox-core.git
