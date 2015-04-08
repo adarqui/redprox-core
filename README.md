@@ -26,9 +26,3 @@ Introduction
 ------------
 
 See examples/simple.hs
-
-
-Re-write
-------------
-
-I might re-write this in Rust.
